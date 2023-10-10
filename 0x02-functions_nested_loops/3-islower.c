@@ -8,7 +8,7 @@
   * Return: 1 if the letter is a lowercase 0 otherwise.
   */
 
-int _islower(int c);
+int _islower(int c)
 {
 	int c;
 

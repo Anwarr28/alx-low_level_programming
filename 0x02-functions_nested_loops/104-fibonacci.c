@@ -2,14 +2,14 @@
 void print_faboni(int rpt);
 
 /**
-  * main - Entry point
+  * main - Entry point.
   *
   * Return: Always 0 (Success)
   */
 
 int main(void)
 {
-	print_faboni(50);
+	print_faboni(98);
 	return (0);
 }
 

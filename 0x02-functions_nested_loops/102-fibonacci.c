@@ -22,8 +22,8 @@ int main(void)
 
 void print_faboni(int rpt)
 {
-	unsigned long int fn, i, prev1, prev2;
-;
+	unsigned long int fn, prev1, prev2;
+	int i;
 
 	prev2 = 0;
 	prev1 = 1;

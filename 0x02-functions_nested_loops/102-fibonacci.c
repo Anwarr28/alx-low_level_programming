@@ -23,7 +23,7 @@ int main(void)
 void print_faboni(int rpt)
 {
 	int i, prev1, prev2;
-	unsigned int fn;
+	unsigned long int fn;
 
 	prev2 = 0;
 	prev1 = 1;
@@ -33,9 +33,9 @@ void print_faboni(int rpt)
 		if (fn != 0)
 		{
 			if (i == rpt)
-				printf("%u\n", fn);
+				printf("%lu\n", fn);
 			else
-				printf("%u, ", fn);
+				printf("%lu, ", fn);
 		}
 		prev2 = prev1;
 		prev1 = fn;

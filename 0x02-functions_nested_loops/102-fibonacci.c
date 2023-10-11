@@ -32,7 +32,7 @@ void print_faboni(int rpt)
 		fn = prev1 + prev2;
 		if (fn != 0)
 		{
-			if (i == rpt)
+			if (i == (rpt - 1))
 				printf("%lu\n", fn);
 			else
 				printf("%lu, ", fn);

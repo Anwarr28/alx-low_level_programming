@@ -4,6 +4,7 @@ void printNum(int i, int j, int n);
 
 /**
   * print_times_table - prints the 9 times table, starting with 0.
+  * @n: the size of the table
   *
   * Return: return nothing.
   */

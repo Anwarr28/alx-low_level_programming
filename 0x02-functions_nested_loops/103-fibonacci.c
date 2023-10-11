@@ -24,6 +24,7 @@ void print_faboni(unsigned long int max)
 {
 	unsigned long int fn, prev1, prev2, total;
 
+	fn = total = 0;
 	prev2 = 0;
 	prev1 = 1;
 	while (fn <= max)

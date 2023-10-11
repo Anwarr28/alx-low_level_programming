@@ -19,13 +19,12 @@ int main(void)
 
 /**
   * sum_of_multi - computes the sum of all the multiples
-  * 		of 3 or 5 below 1024.
+  * of 3 or 5 below 1024.
   * @i: the number its multipes will be sum
   * @total: biggest number to begin with
   *
   * Return: sum of all founded numbers under total.
   */
-
 
 int sum_of_multi(int i, int total)
 {

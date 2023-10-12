@@ -12,12 +12,15 @@ void print_number(int n)
 {
 	int len = num_length(n);
 	int j = 0, i = 1, a;
+	unsigned int num;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		num = -n;
 	}
+	else
+		num = n;
 	while ((len - 1) != 0)
 	{
 		i *= 10;
@@ -28,12 +31,12 @@ void print_number(int n)
 	{
 		if (j < (len - 1))
 		{
-			a = n / i;
+			a = num / i;
 			_putchar(a % 10 + '0');
 			i /= 10;
 		}
 		else
-			_putchar(n % 10 + '0');
+			_putchar(num % 10 + '0');
 		j++;
 	}
 }

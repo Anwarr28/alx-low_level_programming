@@ -8,19 +8,24 @@
 
 void more_numbers(void)
 {
-	int i, j;
+	int i, j, a;
 
 	for (i = 0; i < 10; i++)
 	{
-		for (j = 0; j < 14; j++)
+		for (j = 0; j <= 14; j++)
 		{
+			_putchar(j > 9 ? '1' : j + '0');
 			if (j > 9)
 			{
-				_putchar('1');
-				j = j % 10;
+				a = j % 10;
+				_putchar(a + '0');
 			}
-			_putchar(j + '0');
 		}
 		_putchar('\n');
 	}
+}
+int main(void)
+{
+    more_numbers();
+    return (0);
 }

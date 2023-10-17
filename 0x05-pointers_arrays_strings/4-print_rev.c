@@ -18,9 +18,9 @@ void print_rev(char *s)
 		c++;
 	}
 
-	while (len >= 0)
+	while (len > 0)
 	{
-		_putchar(*(s + len - 2));
+		_putchar(*(s + len - 1));
 		len--;
 	}
 	_putchar('\n');

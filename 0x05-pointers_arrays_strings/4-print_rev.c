@@ -23,5 +23,12 @@ void print_rev(char *s)
 		_putchar(*(s + len - 1));
 		len--;
 	}
-	_putchar ('\n');
+}
+int main(void)
+{
+    char *str;
+
+    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+    print_rev(str);
+    return (0);
 }

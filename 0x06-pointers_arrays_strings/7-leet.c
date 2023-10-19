@@ -10,6 +10,7 @@
 char *leet(char *a)
 {
 	char leet[] = "AaEeOoTtLl";
+	char rplce[] = "4433007711";
 	int i, j;
 
 	for (i = 0; a[i] != '\0'; i++)
@@ -17,19 +18,7 @@ char *leet(char *a)
 		for (j = 0; leet[j] != '\0'; j++)
 		{
 			if (a[i] == leet[j])
-			{
-				if (leet[j] == 'a' || leet[j] == 'A')
-					a[i] = '4';
-				if (leet[j] == 'e' || leet[j] == 'E')
-					a[i] = '3';
-				if (leet[j] == 'o' || leet[j] == 'O')
-					a[i] = '0';
-				if (leet[j] == 't' || leet[j] == 'T')
-					a[i] = '7';
-				if (leet[j] == 'l' || leet[j] == 'L')
-					a[i] = '1';
-				break;
-			}
+				a[i] = rplce[i];
 		}
 	}
 	return (a);

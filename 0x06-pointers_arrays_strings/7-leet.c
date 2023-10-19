@@ -18,7 +18,10 @@ char *leet(char *a)
 		for (j = 0; leet[j] != '\0'; j++)
 		{
 			if (a[i] == leet[j])
-				a[i] = rplce[i];
+			{
+				a[i] = rplce[j];
+				break;
+			}
 		}
 	}
 	return (a);

@@ -7,7 +7,7 @@
   * Return: the new encoded string.
   */
 
-char *rot13(char *a);
+char *rot13(char *a)
 {
 	char abc[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMabcdefghijklmnopqrstuvwxyz";

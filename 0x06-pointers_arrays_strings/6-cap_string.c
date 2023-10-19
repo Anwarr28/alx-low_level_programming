@@ -12,13 +12,15 @@ char *cap_string(char *a)
 	char del[] = " \n,;.!?\"(){}\t";
 	int i, j;
 
+	if (a[0] <= 'z' && a[0] >= 'a')
+		a[0] -= 32;
 	for (i = 0; a[i] != '\0'; i++)
 	{
 		for (j = 0; del[j] != '\0'; j++)
 		{
 			if (a[i] == del[j])
 			{
-				if(a[i + 1] <= 'z' && a[i + 1] > 'a')
+				if (a[i + 1] <= 'z' && a[i + 1] > 'a')
 					a[i + 1] -= 32;
 				else
 					break;

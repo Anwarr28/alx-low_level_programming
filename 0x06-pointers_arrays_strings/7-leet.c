@@ -28,6 +28,7 @@ char *leet(char *a)
 					a[i] = '7';
 				if (leet[j] == 'l' || leet[j] == 'L')
 					a[i] = '1';
+				break;
 			}
 		}
 	}

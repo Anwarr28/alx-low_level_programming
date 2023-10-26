@@ -1,11 +1,12 @@
 #include "main.h"
 
- /**
-  * findRoot - help _square_recursion to find the root using recursion.
-  * @n: the number to find its square root.
-  * @i: the square root of n.
+/**
+  * findRoot - find the root of n.
+  * @n: the number to find its square.
+  * @i: the root of n.
   *
-  * Return: the square root of n or -1 if it does not have a square root.
+  * Description: this function find the root of n using recursion.
+  * Return: the root of n or -1 or n has no root.
   */
 int findRoot(int n, int i)
 {
@@ -16,14 +17,12 @@ int findRoot(int n, int i)
 	return (findRoot(n, i + 1));
 }
 /**
-  * _sqrt_recursion - find the natural square root of a number.
-  * @n: the number to find its square root.
-  *
-  * Return: the square root of n or -1 if it does not have a square root.
-  */
+ * _sqrt_recursion - use findRoot to find root.
+ * @n: the number to find its root.
+ *
+ * Return: the same return of find root.
+ */
 int _sqrt_recursion(int n)
 {
 	return (findRoot(n, 1));
 }
-
-

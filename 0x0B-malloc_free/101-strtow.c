@@ -32,6 +32,9 @@ char **allocate_memory(char *str, int h)
 	int w = 0, i, j;
 	char **s;
 
+	if (h == 0)
+		return (NULL):
+
 	s = (char **) malloc(sizeof(char *) * (h + 1));
 	if (s == NULL)
 		return (NULL);
@@ -76,7 +79,7 @@ char **strtow(char *str)
 {
 	int h;
 
-	if (str == NULL || *str == '\0' || *str == ' ')
+	if (str == NULL || *str == '\0')
 		return (NULL);
 
 	h = count_words(str);

@@ -74,10 +74,12 @@ char **allocate_memory(char *str, int h)
   */
 char **strtow(char *str)
 {
+	int h;
+
 	if (str == NULL || *str == '\0')
 		return (NULL);
 
-	int h = count_words(str);
+	h = count_words(str);
 
 	return (allocate_memory(str, h));
 }

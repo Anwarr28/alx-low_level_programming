@@ -32,7 +32,7 @@ char **allocate_memory(char *str, int h)
 	int w = 0, i, j;
 	char **s;
 
-	s = (char **) malloc(sizeof(char *) * (h + 1);
+	s = (char **) malloc(sizeof(char *) * (h + 1));
 	if (s == NULL)
 		return (NULL);
 	i = 0;

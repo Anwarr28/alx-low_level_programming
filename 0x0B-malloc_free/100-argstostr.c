@@ -21,9 +21,17 @@ char *argstostr(int ac, char **av)
 			size++;
 	}
 	size = size + ac + 1;
-	s = (char *) realloc(s, sizeof(char) * size)
+	s = (char *) realloc(s, sizeof(char) * size);
 	if (s == NULL)
 		return (NULL);
 
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++)
+		{
+			*s = av[i][j];
+			s++;
+		}
+	}
 	return (s);
 }

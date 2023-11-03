@@ -61,7 +61,8 @@ char **allocate_memory(char *str, int h)
 		}
 		for (j = 0; j < w; j++)
 			s[i][j] = *(str - w + j);
-		s[i][j] = '\0';
+		if (s[i][j] != '\0')
+			s[i][j] = '\0';
 		w = 0;
 		i++;
 	}

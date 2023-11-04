@@ -1,6 +1,7 @@
 #include "main.h"
 int count_words(char *str);
 char **allocate_memory(char *str, int h);
+void print_tab(char **tab);
 
 /**
   * count_words - Function to count the number of words in the string
@@ -43,6 +44,8 @@ char **allocate_memory(char *str, int h)
 	{
 		while (*str == ' ')
 			str++;
+		if (*str == '\0')
+			break;
 		while (*str != ' ' && *str != '\0')
 		{
 			w++;
@@ -86,4 +89,39 @@ char **strtow(char *str)
 	h = count_words(str);
 
 	return (allocate_memory(str, h));
+}
+char **strtow(char *);
+
+/**
+ * print_tab - Prints an array of string
+ *
+ * @tab: The array to print
+ */
+void print_tab(char **tab)
+{
+	int i;
+
+	for (i = 0; tab[i] != NULL; ++i)
+	{
+		printf("%s\n", tab[i]);
+	}
+}
+
+/**
+ * main - check the code .
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	char **tab;
+
+	tab = strtow("   my name is anwar and i can not solve this    ");
+	if (tab == NULL)
+	{
+		printf("Failed\n");
+		return (1);
+	}
+	print_tab(tab);
+	return (0);
 }

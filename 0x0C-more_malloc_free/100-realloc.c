@@ -19,18 +19,19 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
-		return(NULL);
+		return (NULL);
 	}
 	nptr = malloc(new_size);
 	if (nptr == NULL)
 		return (NULL);
 	if (new_size > old_size)
 	{
-		nptr = memcpy(nptr, ptr, old_size); 
+		nptr = memcpy(nptr, ptr, old_size);
 	}
 	else
 	{
-		nptr = memcpy(nptr, ptr, new_size); 
+		nptr = memcpy(nptr, ptr, new_size);
 	}
+	free(ptr);
 	return (nptr);
 }

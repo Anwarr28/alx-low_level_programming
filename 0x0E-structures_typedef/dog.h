@@ -12,7 +12,7 @@
   * Description: structure for storing dogs details which is
   *		the name, age and the owner of the dog.
   */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;

@@ -8,7 +8,7 @@
   *		which is used to compare.
   *
   * Return: the index of hte first element for which the cmp fuction
-  * 		does nor return 0. -1 if no element matches or size is <= 0.
+  *		does nor return 0. -1 if no element matches or size is <= 0.
   */
 int int_index(int *array, int size, int (*cmp)(int))
 {

@@ -11,28 +11,16 @@
   */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
+	va_list(print);
 	unsigned int i;
 
-	va_list(print);
-
 	va_start(print, n);
-	if (separator != NULL)
+	for (i = 0; i < n; i++)
 	{
-		for (i = 0; i < n; i++)
-		{
-			if (i != n - 1)
-			{
-				printf("%d%s", va_arg(print, int), separator);
-			}
-			else
-				printf("%d\n", va_arg(print, int));
-		}
+		printf("%d", va_arg(print, int));
+		if (i != n - 1 && separator != NULL)
+			printf("%s", separator);
 	}
-	else
-	{
-		for (i = 0; i < n; i++)
-			printf("%d", va_arg(print, int));
-		printf("\n");
-	}
+	printf("\n");
 	va_end(print);
 }

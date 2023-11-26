@@ -22,13 +22,13 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 
 	temp2->len = len;
-	temp2->str = malloc(sizeof(char) * len + 1);
+
+	temp2->str = strdup(str);
 	if (temp2 == NULL)
 	{
 		free(temp2);
 		return (NULL);
 	}
-	temp2->str = strdup(str);
 	temp2->next = NULL;
 
 	if (*head == NULL)

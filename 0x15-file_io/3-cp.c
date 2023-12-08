@@ -1,5 +1,7 @@
 #include "main.h"
 
+#define PERMISSION (S_IRUSR | S_IWUSER | S_IRGRP | S_IWGRP | S_IROTH)
+
 /**
   * main - program that copies the content of a file to another file.
   * @argc: the number of argument passed to the program.
@@ -25,7 +27,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	fd2 = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 664);
+	fd2 = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, PERMISSION);
 	if (fd2 < 0)
 	{
 		close(fd1);
@@ -47,7 +49,7 @@ int main(int argc, char *argv[])
 		{
 			close(fd1);
 			close(fd2);
-			dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 			exit(99);
 		}
 
